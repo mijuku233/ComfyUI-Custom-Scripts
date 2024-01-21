@@ -37,7 +37,7 @@ class StringFunction:
            if text_c is None:
                text_c = ""
            if text_b.startswith("/") and text_b.endswith("/"):
-               regex = text_b[1:-1]
+               regex = r'' + text_b[1:-1] + ''
                out = re.sub(regex, text_c, text_a)
            else:
                out = text_a.replace(text_b, text_c)
